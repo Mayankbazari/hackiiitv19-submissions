@@ -19,7 +19,7 @@ class _Previous_orderState extends State<Previous_order> {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Image.("images/envelope.png"),
+              Image.asset("images/envelope.png"),
               Table(
                 children: _tableBuilder(),
               ),

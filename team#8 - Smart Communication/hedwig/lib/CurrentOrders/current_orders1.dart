@@ -19,13 +19,14 @@ class _Current_order1State extends State<Current_order1> {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Image.("images/envelope.png"),
+              Image.asset("images/envelope.png"),
               Table(
                 children: _tableBuilder(),
               ),
               Padding(
-              padding: const EdgeInsets.only(top : 15,bottom : 15,right : 250),
-              child : Image.asset("images/courier.png",height : 150 ,width : 150,alignment : Alignment.centerLeft ),
+                padding: const EdgeInsets.only(top: 15, bottom: 15, right: 250),
+                child: Image.asset("images/courier.png",
+                    height: 150, width: 150, alignment: Alignment.centerLeft),
               ),
               Table(
                 children: _tableBuilder1(),
@@ -42,8 +43,7 @@ class _Current_order1State extends State<Current_order1> {
       _tableRowBuilder("Order ID", "D653289"),
       _tableRowBuilder("Sender's Name", "Anvay Mishra"),
       _tableRowBuilder("Receiver's Name", "Yash Shah"),
-      _tableRowBuilder(
-          "Pick-up Location", "E402,Ishan Silver,Ahemdabad"),
+      _tableRowBuilder("Pick-up Location", "E402,Ishan Silver,Ahemdabad"),
       _tableRowBuilder("Drop Location", "G203 Yogeshwar Tenament,Ahemdabad"),
       // _tableRowBuilder(
       //     "Receiver's Address", "Sabar Institute of Technology,Beawar"),
@@ -58,12 +58,11 @@ class _Current_order1State extends State<Current_order1> {
     ];
   }
 
-_tableBuilder1() {
+  _tableBuilder1() {
     return [
       _tableRowBuilder("ID", "C623541"),
       _tableRowBuilder("Name", "Nerandra"),
-      _tableRowBuilder(
-          "Mobile No.", "9654321853"),
+      _tableRowBuilder("Mobile No.", "9654321853"),
     ];
   }
 

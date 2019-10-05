@@ -19,7 +19,7 @@ class _Previous_order1State extends State<Previous_order1> {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-                  Image.asset("images/clipart-bread-day-10.png"),
+              Image.asset("images/clipart-bread-day-10.png"),
               Table(
                 children: _tableBuilder(),
               ),
@@ -34,7 +34,7 @@ class _Previous_order1State extends State<Previous_order1> {
     return [
       _tableRowBuilder("Order ID", "P123242"),
       _tableRowBuilder("Sender's Name", "Mayank Ajmeri"),
-      _tableRowBuilder("Receiver's Name", "NIshant Satapara"),
+      _tableRowBuilder("Receiver's Name", "Nishant Satapara"),
       _tableRowBuilder(
           "Pick-up Location", "GEC Gandhinagar, Sector 28, Gandhinagar"),
       _tableRowBuilder("Drop Location", "Geta Mandir,Ahemdabad"),
