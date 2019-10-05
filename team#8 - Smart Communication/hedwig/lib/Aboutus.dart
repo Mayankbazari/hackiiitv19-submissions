@@ -16,7 +16,11 @@ class _About_usState extends State<About_us> {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
-          child: Container(),
+          child: Column(
+            children: <Widget>[
+              Image.asset("images/pigwidgeon.jpg"),
+            ],
+          ),
         ),
       ),
     );
