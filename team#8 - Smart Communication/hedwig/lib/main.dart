@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hedwig/Dashboard.dart';
+import 'package:hedwig/user_profile.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Dashboard(),
+      home: User_info(),
     );
   }
 }

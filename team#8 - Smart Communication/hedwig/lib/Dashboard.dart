@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hedwig/user_profile.dart';
 
 class Dashboard extends StatefulWidget {
   @override
