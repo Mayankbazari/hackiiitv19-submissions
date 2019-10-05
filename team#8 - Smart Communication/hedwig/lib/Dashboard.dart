@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hedwig/NewOrder.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -7,13 +8,63 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
   @override
+  Drawer d1() {
+    return Drawer(
+      child: ListView(
+        children: <Widget>[
+          UserAccountsDrawerHeader(
+            accountEmail: Text("bazari@mayank.com"),
+            accountName: Text(
+              "Mayank Bazari",
+              style: TextStyle(fontSize: 25),
+            ),
+            currentAccountPicture: CircleAvatar(
+              backgroundImage: AssetImage('images/hedwig.jpg'),
+            ),
+            decoration: BoxDecoration(color: Colors.black),
+          ),
+          ListTile(
+            leading: Icon(Icons.add_circle_outline),
+            title: Text(
+              'Current Orders',
+              style: TextStyle(fontSize: 20),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.access_time),
+            title: Text(
+              'Previous Orders',
+              style: TextStyle(fontSize: 20),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.help_outline),
+            title: Text(
+              'About Us',
+              style: TextStyle(fontSize: 20),
+            ),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("HEDWIG"),
         centerTitle: true,
       ),
-      drawer: Drawer(),
+      drawer: d1(),
       body: Stack(
         children: <Widget>[
           Image(
@@ -23,10 +74,11 @@ class _DashboardState extends State<Dashboard> {
             fit: BoxFit.cover,
             color: Colors.white70,
             colorBlendMode: BlendMode.lighten,
-            // filterQuality: FilterQuality.high,
           ),
           SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[],
             ),
           ),
@@ -34,7 +86,12 @@ class _DashboardState extends State<Dashboard> {
       ),
       floatingActionButton: FloatingActionButton.extended(
         label: Text("New Order"),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => NewOrder()),
+          );
+        },
         backgroundColor: Colors.black87,
       ),
     );
