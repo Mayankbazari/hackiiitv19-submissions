@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hedwig/NewOrder.dart';
+import 'package:hedwig/user_profile.dart';
+import 'package:hedwig/c_orders.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -19,9 +21,17 @@ class _DashboardState extends State<Dashboard> {
               style: TextStyle(fontSize: 25),
             ),
             currentAccountPicture: CircleAvatar(
-              backgroundImage: AssetImage('images/hedwig.jpg'),
+              backgroundImage: AssetImage('images/mayank.jpeg'),
             ),
             decoration: BoxDecoration(color: Colors.black),
+            onDetailsPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => User_info(),
+                ),
+              );
+            },
           ),
           ListTile(
             leading: Icon(Icons.add_circle_outline),
@@ -30,7 +40,8 @@ class _DashboardState extends State<Dashboard> {
               style: TextStyle(fontSize: 20),
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => C_orders()));
             },
           ),
           ListTile(
