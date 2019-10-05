@@ -74,6 +74,7 @@ class _DashboardState extends State<Dashboard> {
       appBar: AppBar(
         title: Text("HEDWIG"),
         centerTitle: true,
+        backgroundColor: Colors.black,
       ),
       drawer: d1(),
       body: Stack(
