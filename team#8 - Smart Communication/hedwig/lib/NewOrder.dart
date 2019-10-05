@@ -192,6 +192,7 @@ class _NewOrderState extends State<NewOrder> {
                 onPressed: () {},
               ),
             ),
+            pa(20),
           ],
         ),
       ),
