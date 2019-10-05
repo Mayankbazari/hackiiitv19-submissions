@@ -21,12 +21,16 @@ class _DashboardState extends State<Dashboard> {
               style: TextStyle(fontSize: 25),
             ),
             currentAccountPicture: CircleAvatar(
-              backgroundImage: AssetImage('images/hedwig.jpg'),
+              backgroundImage: AssetImage('images/mayank.jpeg'),
             ),
             decoration: BoxDecoration(color: Colors.black),
             onDetailsPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => User_info()));
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => User_info(),
+                ),
+              );
             },
           ),
           ListTile(
