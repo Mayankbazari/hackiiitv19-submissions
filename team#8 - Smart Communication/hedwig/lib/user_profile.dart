@@ -46,8 +46,7 @@ class _User_infoState extends State<User_info> {
                 Padding(
                   padding: const EdgeInsets.only(top: 10, bottom: 10),
                   child: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        "https://avatars0.githubusercontent.com/u/42274566?s=460&v=4"),
+                    backgroundImage: AssetImage("images/mayank.jpeg"),
                     radius: 100,
                   ),
                 ),
