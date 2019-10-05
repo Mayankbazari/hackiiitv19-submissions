@@ -13,16 +13,23 @@ class _DashboardState extends State<Dashboard> {
     return Drawer(
       child: ListView(
         children: <Widget>[
-          UserAccountsDrawerHeader(
-            accountEmail: Text("bazari@mayank.com"),
-            accountName: Text(
-              "Mayank Bazari",
-              style: TextStyle(fontSize: 25),
+          Hero(
+            tag: "Image",
+            child: UserAccountsDrawerHeader(
+              accountEmail: Text("bazari@mayank.com"),
+              accountName: Text(
+                "Mayank Bazari",
+                style: TextStyle(fontSize: 25),
+              ),
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: AssetImage('images/hedwig.jpg'),
+              ),
+              decoration: BoxDecoration(color: Colors.black),
+              onDetailsPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => User_info()));
+              },
             ),
-            currentAccountPicture: CircleAvatar(
-              backgroundImage: AssetImage('images/hedwig.jpg'),
-            ),
-            decoration: BoxDecoration(color: Colors.black),
           ),
           ListTile(
             leading: Icon(Icons.add_circle_outline),
@@ -64,6 +71,7 @@ class _DashboardState extends State<Dashboard> {
       appBar: AppBar(
         title: Text("HEDWIG"),
         centerTitle: true,
+        backgroundColor: Colors.black,
       ),
       drawer: d1(),
       body: Stack(
