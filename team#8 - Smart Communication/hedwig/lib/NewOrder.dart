@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class NewOrder extends StatefulWidget {
   @override
@@ -124,9 +125,48 @@ class _NewOrderState extends State<NewOrder> {
               child: Table(
                 columnWidths: {1: FractionColumnWidth(0.7)},
                 children: [
+                  TableRow(
+                    children: [
+                      TableCell(
+                        verticalAlignment: TableCellVerticalAlignment.middle,
+                        child: Text(
+                          (_currValue == 1) ? "Weight(g):" : "Weight(kg)",
+                          softWrap: true,
+                          style: TextStyle(fontSize: 18),
+                        ),
+                      ),
+                      TableCell(
+                        child: new TextFormField(
+                          decoration: InputDecoration(hintText: "Enter Weight"),
+                          keyboardType: TextInputType.number,
+                        ),
+                      ),
+                    ],
+                  ),
                   tr1("Description", TextInputType.text),
-                  tr1("Weight", TextInputType.number),
-                  tr1("Pickup Time", TextInputType.datetime),
+                  TableRow(
+                    children: [
+                      TableCell(
+                        verticalAlignment: TableCellVerticalAlignment.middle,
+                        child: Text(
+                          "Pickup Time:",
+                          softWrap: true,
+                          style: TextStyle(fontSize: 18),
+                        ),
+                      ),
+                      TableCell(
+                        child: new TextFormField(
+                          decoration:
+                              InputDecoration(hintText: "Enter Pickup Time"),
+                          keyboardType: TextInputType.datetime,
+                          inputFormatters: [
+                            BlacklistingTextInputFormatter(
+                                new RegExp('[\\.|\\-]'))
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                   TableRow(
                     children: [
                       TableCell(

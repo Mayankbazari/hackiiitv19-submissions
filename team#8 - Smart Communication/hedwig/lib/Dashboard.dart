@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart' as prefix0;
+// import 'package:flutter/material.dart' as prefix0;
+import 'package:hedwig/Aboutus.dart';
 import 'package:hedwig/CurrentOrders/current_orders.dart';
 import 'package:hedwig/CurrentOrders/current_orders1.dart';
 import 'package:hedwig/NewOrder.dart';
+import 'package:hedwig/PreviousOrder/previous_order.dart';
+import 'package:hedwig/PreviousOrder/previous_order1.dart';
+import 'package:hedwig/PreviousOrder/previous_order2.dart';
 import 'package:hedwig/p_order.dart';
 import 'package:hedwig/user_profile.dart';
 import 'package:hedwig/c_orders.dart';
@@ -66,7 +70,8 @@ class _DashboardState extends State<Dashboard> {
               style: TextStyle(fontSize: 20),
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => About_us()));
             },
           ),
         ],
@@ -166,7 +171,7 @@ class _DashboardState extends State<Dashboard> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Current_order(),
+                              builder: (context) => Current_order1(),
                             ),
                           );
                         },
@@ -175,13 +180,13 @@ class _DashboardState extends State<Dashboard> {
                         padding: EdgeInsets.all(10),
                       ),
                       GestureDetector(
-                        child: c1(Colors.blue, "P987654", "Mayank Ajmeri",
-                            "Document"),
+                        child: c1(
+                            Colors.blue, "P987654", "Mayank Ajmeri", "Parcel"),
                         onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Current_order1(),
+                              builder: (context) => Current_order(),
                             ),
                           );
                         },
@@ -209,7 +214,7 @@ class _DashboardState extends State<Dashboard> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Current_order(),
+                              builder: (context) => Previous_order(),
                             ),
                           );
                         },
@@ -224,7 +229,7 @@ class _DashboardState extends State<Dashboard> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Current_order1(),
+                              builder: (context) => Previous_order1(),
                             ),
                           );
                         },
@@ -239,7 +244,7 @@ class _DashboardState extends State<Dashboard> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Current_order1(),
+                              builder: (context) => Previous_order2(),
                             ),
                           );
                         },
