@@ -37,6 +37,9 @@ flutter:
   assets:
     - images/hedwig.jpg
     - images/mayank.jpeg
+    - images/clipart-bread-day-10.png
+    - images/envelope.png
+    - images/courier.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

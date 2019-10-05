@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Current_order1 extends StatefulWidget {
+class Previous_order extends StatefulWidget {
   @override
-  _Current_order1State createState() => _Current_order1State();
+  _Previous_orderState createState() => _Previous_orderState();
 }
 
-class _Current_order1State extends State<Current_order1> {
+class _Previous_orderState extends State<Previous_order> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,14 +23,6 @@ class _Current_order1State extends State<Current_order1> {
               Table(
                 children: _tableBuilder(),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 15, bottom: 15, right: 250),
-                child: Image.asset("images/courier.png",
-                    height: 150, width: 150, alignment: Alignment.centerLeft),
-              ),
-              Table(
-                children: _tableBuilder1(),
-              ),
             ],
           ),
         ),
@@ -40,29 +32,22 @@ class _Current_order1State extends State<Current_order1> {
 
   _tableBuilder() {
     return [
-      _tableRowBuilder("Order ID", "D653289"),
+      _tableRowBuilder("Order ID", "D123456"),
       _tableRowBuilder("Sender's Name", "Anvay Mishra"),
-      _tableRowBuilder("Receiver's Name", "Yash Shah"),
-      _tableRowBuilder("Pick-up Location", "E402,Ishan Silver,Ahemdabad"),
-      _tableRowBuilder("Drop Location", "G203 Yogeshwar Tenament,Ahemdabad"),
+      _tableRowBuilder("Receiver's Name", "Mayank Ajmeri"),
+      _tableRowBuilder(
+          "Pick-up Location", "GEC Gandhinagar, Sector 28, Gandhinagar"),
+      _tableRowBuilder("Drop Location", "IIITV Hostel, Prantij"),
       // _tableRowBuilder(
       //     "Receiver's Address", "Sabar Institute of Technology,Beawar"),
       _tableRowBuilder("Package Type", "Document"),
-      _tableRowBuilder("Weight", "120 grams"),
-      _tableRowBuilder("Pick-up Time", "9:30"),
-      _tableRowBuilder("Pick-up Date", "5 September 2019"),
-      _tableRowBuilder("Expected Drop-Time", "15:20"),
-      _tableRowBuilder("Estimated Date", "5 September 2019"),
+      _tableRowBuilder("Weight", "75 gm"),
+      _tableRowBuilder("Pick-up Time", "12:50"),
+      _tableRowBuilder("Pick-up Date", "6 October 2019"),
+      _tableRowBuilder("Drop-Time", "16:00"),
+      _tableRowBuilder("Delivery Date", "6 October 2019"),
       _tableRowBuilder("Handle with Care", "No"),
-      _tableRowBuilder("Grand Total", "Rs. 135"),
-    ];
-  }
-
-  _tableBuilder1() {
-    return [
-      _tableRowBuilder("ID", "C623541"),
-      _tableRowBuilder("Name", "Nerandra"),
-      _tableRowBuilder("Mobile No.", "9654321853"),
+      _tableRowBuilder("Grand Total", "Rs. 127"),
     ];
   }
 

@@ -117,6 +117,7 @@ class _DashboardState extends State<Dashboard> {
       appBar: AppBar(
         title: Text("HEDWIG"),
         centerTitle: true,
+        backgroundColor: Colors.black,
       ),
       drawer: d1(),
       floatingActionButton: FloatingActionButton.extended(
@@ -157,8 +158,8 @@ class _DashboardState extends State<Dashboard> {
                   child: Row(
                     children: <Widget>[
                       GestureDetector(
-                        child: c1(Colors.red[400], "OIGS8G449DF",
-                            "Mayank Ajmeri", "Parcel"),
+                        child: c1(Colors.red[400], "D653289", "Yash Shah",
+                            "Document"),
                         onTap: () {
                           Navigator.push(
                             context,
@@ -172,7 +173,7 @@ class _DashboardState extends State<Dashboard> {
                         padding: EdgeInsets.all(10),
                       ),
                       GestureDetector(
-                        child: c1(Colors.blue, "OIGS8G449DF", "Mayank Ajmeri",
+                        child: c1(Colors.blue, "P987654", "Mayank Ajmeri",
                             "Document"),
                         onTap: () {
                           Navigator.push(
@@ -200,8 +201,8 @@ class _DashboardState extends State<Dashboard> {
                   child: Row(
                     children: <Widget>[
                       GestureDetector(
-                        child: c1(Colors.green[400], "OIGS8G449DF",
-                            "Mayank Ajmeri", "Parcel"),
+                        child: c1(Colors.green[400], "D123456", "Mayank Ajmeri",
+                            "Document"),
                         onTap: () {
                           Navigator.push(
                             context,
@@ -215,8 +216,23 @@ class _DashboardState extends State<Dashboard> {
                         padding: EdgeInsets.all(10),
                       ),
                       GestureDetector(
-                        child: c1(Colors.amber, "OIGS8G449DF", "Mayank Ajmeri",
-                            "Document"),
+                        child: c1(Colors.amber, "P123242", "Nishant Satapara",
+                            "Parcel"),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Current_order1(),
+                            ),
+                          );
+                        },
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(10),
+                      ),
+                      GestureDetector(
+                        child: c1(Colors.purple[300], "P156453",
+                            "Prateek Chouhan", "Parcel"),
                         onTap: () {
                           Navigator.push(
                             context,
