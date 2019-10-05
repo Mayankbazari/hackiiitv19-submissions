@@ -3,6 +3,7 @@
 ## Theme - Smart Communication
 
 ## Description
+We will be providing the platform that would facilitate local deliveries. The basic idea is enabling a one to one connection between the sender and transport channel , it will have cutting edge over the existing methods in the targeted area.
 
 ## Requirements
 This project is a starting point for a Flutter application.
