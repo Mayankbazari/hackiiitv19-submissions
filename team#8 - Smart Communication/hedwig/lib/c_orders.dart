@@ -8,6 +8,18 @@ class C_orders extends StatefulWidget {
 class _C_ordersState extends State<C_orders> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Current Orders"),
+      ),
+      body: Column(
+        children: <Widget>[
+          Row(
+            children: <Widget>[],
+          ),
+        ],
+      ),
+    );
   }
 }
