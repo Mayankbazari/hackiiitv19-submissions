@@ -3,6 +3,7 @@ import 'package:flutter/material.dart' as prefix0;
 import 'package:hedwig/CurrentOrders/current_orders.dart';
 import 'package:hedwig/CurrentOrders/current_orders1.dart';
 import 'package:hedwig/NewOrder.dart';
+import 'package:hedwig/p_order.dart';
 import 'package:hedwig/user_profile.dart';
 import 'package:hedwig/c_orders.dart';
 
@@ -54,7 +55,8 @@ class _DashboardState extends State<Dashboard> {
               style: TextStyle(fontSize: 20),
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => P_orders()));
             },
           ),
           ListTile(
