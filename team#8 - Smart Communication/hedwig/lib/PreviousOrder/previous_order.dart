@@ -44,7 +44,7 @@ class _Previous_orderState extends State<Previous_order> {
       _tableRowBuilder("Weight", "75 gm"),
       _tableRowBuilder("Pick-up Time", "12:50"),
       _tableRowBuilder("Pick-up Date", "6 October 2019"),
-      _tableRowBuilder("Drop-Time", "15:57"),
+      _tableRowBuilder("Drop-Time", "16:00"),
       _tableRowBuilder("Delivery Date", "6 October 2019"),
       _tableRowBuilder("Handle with Care", "No"),
       _tableRowBuilder("Grand Total", "Rs. 127"),
