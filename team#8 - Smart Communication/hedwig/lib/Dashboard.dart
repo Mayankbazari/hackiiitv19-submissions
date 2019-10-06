@@ -97,15 +97,19 @@ class _DashboardState extends State<Dashboard> {
               style: TextStyle(color: Colors.white, fontSize: 15),
             ),
           ),
-          Padding(padding: EdgeInsets.all(10)),
-          Text(
-            "To: $to",
-            softWrap: true,
-            style: TextStyle(
-                color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-          Padding(padding: EdgeInsets.all(20)),
           Container(
+            padding: EdgeInsets.only(top: 30),
+            child: Text(
+              "To: $to",
+              softWrap: true,
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(top: 40),
             alignment: Alignment.centerLeft,
             child: Text(
               "Package Type: $type",
@@ -113,7 +117,6 @@ class _DashboardState extends State<Dashboard> {
               textAlign: TextAlign.start,
             ),
           ),
-          Padding(padding: EdgeInsets.all(5)),
         ],
       ),
     );
@@ -148,7 +151,6 @@ class _DashboardState extends State<Dashboard> {
             colorBlendMode: BlendMode.lighten,
           ),
           SingleChildScrollView(
-            // scrollDirection: Axis.horizontal,
             child: Column(
               children: <Widget>[
                 Container(
@@ -165,8 +167,8 @@ class _DashboardState extends State<Dashboard> {
                   child: Row(
                     children: <Widget>[
                       GestureDetector(
-                        child: c1(Colors.red[400], "D653289", "Yash Shah",
-                            "Document"),
+                        child: c1(Colors.red[400], "D653289",
+                            "Yash          Shah", "Document"),
                         onTap: () {
                           Navigator.push(
                             context,
