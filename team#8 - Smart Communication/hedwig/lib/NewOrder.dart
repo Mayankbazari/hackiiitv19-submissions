@@ -228,11 +228,41 @@ class _NewOrderState extends State<NewOrder> {
                   "Submit",
                   style: TextStyle(fontSize: 18, color: Colors.white),
                 ),
+                splashColor: Colors.teal[900],
                 color: Colors.teal[300],
-                onPressed: () {},
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    child: new AlertDialog(
+                      title: new Text("Proceed To Payment Gateway"),
+                      content: new Text(
+                          "Please check your details. After proceeding you will not be able to edit your details."),
+                      actions: <Widget>[
+                        FlatButton(
+                          textColor: Colors.blue,
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text(
+                            "Cancel",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ),
+                        FlatButton(
+                          textColor: Colors.blue,
+                          onPressed: () {},
+                          child: Text(
+                            "Proceed",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
               ),
             ),
-            pa(20),
+            pa(15),
           ],
         ),
       ),
